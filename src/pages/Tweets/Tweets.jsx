@@ -1,22 +1,47 @@
 import { CardList } from 'components';
-import { useEffect, useState } from 'react';
-import { fetchUsers } from 'services/fetch';
-import { StyledButton } from './Tweets.style';
+import { useEffect, useRef, useState } from 'react';
+import { fetchAll, fetchUsers } from 'services/fetch';
+import { StyledButton, Text } from './Tweets.style';
+import { IconContext } from 'react-icons';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import { Link, useLocation } from 'react-router-dom';
+
+let allPages = 1;
 
 const Tweets = () => {
   const [cards, setCards] = useState([]);
+  const [page, setPage] = useState(1);
+  const location = useLocation();
+  const backLocation = useRef(location.state?.from ?? '/');
 
   useEffect(() => {
-    fetchUsers().then(data => setCards(data));
+    fetchAll().then(data => {
+      allPages = data.length / 3;
+    });
   }, []);
 
-  // console.log(cards);
+  useEffect(() => {
+    fetchUsers(page).then(data =>
+      setCards(prevState => [...prevState, ...data])
+    );
+  }, [page]);
 
   return (
     <>
-      <StyledButton>Back</StyledButton>
+      <Link to={backLocation.current}>
+        <StyledButton>
+          <IconContext.Provider value={{ size: '30px' }}>
+            <AiOutlineArrowLeft />
+          </IconContext.Provider>
+          <Text>Go back</Text>
+        </StyledButton>
+      </Link>
       <CardList users={cards} />
-      <StyledButton>Load more</StyledButton>
+      {allPages > page && (
+        <StyledButton type="button" onClick={() => setPage(page + 1)}>
+          <Text>Load more</Text>
+        </StyledButton>
+      )}
     </>
   );
 };

@@ -4,7 +4,7 @@ export const Header = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 15px;
+  padding: 10px 15px;
   border-bottom: 2px solid gray;
   box-shadow: 1px 12px 14px 0px rgba(0, 0, 0, 0.68);
   -webkit-box-shadow: 1px 12px 14px 0px rgba(0, 0, 0, 0.68);
@@ -49,4 +49,10 @@ export const Nav = styled.nav`
   gap: 30px;
   font-size: larger;
   font-weight: bolder;
+  align-items: center;
+`;
+
+export const Text = styled.p`
+  font-size: 25px;
+  margin: 0;
 `;

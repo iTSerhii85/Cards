@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import { Container, Header, Nav } from './AppBar.style';
+import { Container, Header, Nav, Text } from './AppBar.style';
+import { IconContext } from 'react-icons';
+import { IoIosHome } from 'react-icons/io';
 
 const setActive = ({ isActive }) =>
   isActive ? { color: 'orange' } : { color: '#ffffff' };
@@ -10,10 +12,12 @@ export const AppBar = () => {
       <Container>
         <Nav>
           <NavLink to="" style={setActive}>
-            Home
+            <IconContext.Provider value={{ size: '25px' }}>
+              <IoIosHome />
+            </IconContext.Provider>
           </NavLink>
           <NavLink to="tweets" style={setActive}>
-            Tweets
+            <Text>Tweets</Text>
           </NavLink>
         </Nav>
       </Container>
