@@ -10,19 +10,25 @@ import {
   TextWrapper,
   Wrapper,
 } from './Card.style';
+import { updateUser } from 'services/fetch';
 
 export const Card = ({ user }) => {
-  const [activeFollow, setActiveFollow] = useState(false);
+  const [activeFollow, setActiveFollow] = useState(user.following);
 
-  // let followers = user.followers;
-
-  const toggleActiveFollow = () => {
-    setActiveFollow(!activeFollow);
+  const toggleActiveFollow = async () => {
     if (!activeFollow) {
       user.followers += 1;
     } else {
       user.followers -= 1;
     }
+
+    const followers = user.followers;
+    const id = user.id;
+    const updateFollowing = !activeFollow;
+
+    await updateUser(id, updateFollowing, followers).then(
+      setActiveFollow(!activeFollow)
+    );
   };
 
   return (

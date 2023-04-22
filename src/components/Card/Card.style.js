@@ -9,19 +9,21 @@ export const Wrapper = styled.div`
   height: 460px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   padding-top: 23px;
   padding-bottom: 30px;
-  /* padding: 28px 36px 36px 36px; */
   background: linear-gradient(
     114.99deg,
     #471ca9 -0.99%,
     #5736a3 54.28%,
     #4b2a99 78.99%
   );
-  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+  /* box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23); */
   border-radius: 20px;
+
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 `;
 
 export const Picture = styled.div`
@@ -47,7 +49,7 @@ export const Boy = styled.div`
   padding: 0px;
   border-radius: 85.9232px;
   background-image: url(${boy});
-  padding: 10px 10px 10px 15px;
+  padding: 9px 10px 10px 14px;
   overflow: hidden;
 `;
 

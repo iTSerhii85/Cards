@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { Container, Header, Nav } from './AppBar.style';
 
 const setActive = ({ isActive }) =>
-  isActive ? { color: 'orange' } : { color: 'black' };
+  isActive ? { color: 'orange' } : { color: '#ffffff' };
 
 export const AppBar = () => {
   return (

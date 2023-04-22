@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  /* position: fixed;
-  top: 0; */
+  position: fixed;
+  top: 0;
   width: 100%;
   padding: 15px;
   border-bottom: 2px solid gray;
@@ -11,7 +11,12 @@ export const Header = styled.header`
   -moz-box-shadow: 1px 12px 14px 0px rgba(0, 0, 0, 0.68);
   margin-bottom: 20px;
   z-index: 100;
-  background-color: #ffffff;
+  background: linear-gradient(
+    114.99deg,
+    #471ca9 -0.99%,
+    #5736a3 54.28%,
+    #4b2a99 78.99%
+  );
 `;
 
 export const Container = styled.div`
