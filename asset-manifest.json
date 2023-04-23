@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/Cards/static/css/main.c3d5249d.css",
-    "main.js": "/Cards/static/js/main.cc707cb6.js",
-    "static/js/544.f63c4409.chunk.js": "/Cards/static/js/544.f63c4409.chunk.js",
-    "static/js/171.ff7b6046.chunk.js": "/Cards/static/js/171.ff7b6046.chunk.js",
+    "main.js": "/Cards/static/js/main.91fe5eb7.js",
+    "static/js/876.f37004fc.chunk.js": "/Cards/static/js/876.f37004fc.chunk.js",
+    "static/js/171.0029f0fa.chunk.js": "/Cards/static/js/171.0029f0fa.chunk.js",
     "static/js/820.2bf6228e.chunk.js": "/Cards/static/js/820.2bf6228e.chunk.js",
+    "static/media/priroda.jpg": "/Cards/static/media/priroda.34f9ceffc30bc9d969d3.jpg",
     "static/media/picture.png": "/Cards/static/media/picture.b3d9942b3f9d5dad1ff0.png",
     "static/media/boy.png": "/Cards/static/media/boy.9628b215ff8b0d11a1c7.png",
     "index.html": "/Cards/index.html",
     "main.c3d5249d.css.map": "/Cards/static/css/main.c3d5249d.css.map",
-    "main.cc707cb6.js.map": "/Cards/static/js/main.cc707cb6.js.map",
-    "544.f63c4409.chunk.js.map": "/Cards/static/js/544.f63c4409.chunk.js.map",
-    "171.ff7b6046.chunk.js.map": "/Cards/static/js/171.ff7b6046.chunk.js.map",
+    "main.91fe5eb7.js.map": "/Cards/static/js/main.91fe5eb7.js.map",
+    "876.f37004fc.chunk.js.map": "/Cards/static/js/876.f37004fc.chunk.js.map",
+    "171.0029f0fa.chunk.js.map": "/Cards/static/js/171.0029f0fa.chunk.js.map",
     "820.2bf6228e.chunk.js.map": "/Cards/static/js/820.2bf6228e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.cc707cb6.js"
+    "static/js/main.91fe5eb7.js"
   ]
 }
