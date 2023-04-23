@@ -20,6 +20,26 @@ export const fetchUsers = async page => {
   }
 };
 
+export const fetchAllFilteredUsers = async following => {
+  try {
+    const response = await axios.get(`/users?following=${following}`);
+    return response.data;
+  } catch (e) {
+    console.log(e.message);
+  }
+};
+
+export const fetchFilteredUsers = async (following, page) => {
+  try {
+    const response = await axios.get(
+      `/users?following=${following}&page=${page}&limit=3`
+    );
+    return response.data;
+  } catch (e) {
+    console.log(e.message);
+  }
+};
+
 export const updateUser = async (id, activeFollow, followers) => {
   try {
     const response = await axios.put(`/users/${id}`, {

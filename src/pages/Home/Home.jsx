@@ -1,8 +1,10 @@
+import { Text, Wrapper } from './Home.style';
+
 const Home = () => {
   return (
-    <>
-      <h1>HOME PAGE</h1>
-    </>
+    <Wrapper>
+      <Text>HOME PAGE</Text>
+    </Wrapper>
   );
 };
 

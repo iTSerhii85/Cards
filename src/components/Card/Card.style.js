@@ -90,6 +90,11 @@ export const StyledButton = styled.button`
   text-transform: uppercase;
   color: #373737;
   cursor: pointer;
+
+  :hover {
+    color: #f36429;
+    scale: 1.2;
+  }
 `;
 
 export const StyledFollowingButton = styled.button`
@@ -107,6 +112,11 @@ export const StyledFollowingButton = styled.button`
   text-transform: uppercase;
   color: #373737;
   cursor: pointer;
+
+  :hover {
+    color: #f36429;
+    scale: 1.2;
+  }
 `;
 
 export const Avatar = styled.img`

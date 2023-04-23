@@ -24,24 +24,9 @@ export const Container = styled.div`
   margin: 0;
   margin-left: auto;
   margin-right: auto;
-
-  @media screen and (min-width: 480px) {
-    width: 480px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 1440px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const Nav = styled.nav`
@@ -52,7 +37,26 @@ export const Nav = styled.nav`
   align-items: center;
 `;
 
+export const IkonWrapper = styled.div`
+  :hover {
+    scale: 1.2;
+  }
+`;
+
 export const Text = styled.p`
   font-size: 25px;
   margin: 0;
+  :hover {
+    scale: 1.2;
+  }
+`;
+
+export const FilterButton = styled.button`
+  background-color: inherit;
+  cursor: pointer;
+
+  :hover {
+    color: #f36429;
+    scale: 1.2;
+  }
 `;
