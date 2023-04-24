@@ -15,16 +15,20 @@ import { updateUser } from 'services/fetch';
 export const Card = ({ user }) => {
   const [activeFollow, setActiveFollow] = useState(user.following);
 
+  const followers = user.followers;
+  const id = user.id;
+  const updateFollowing = !activeFollow;
+
+  let num = followers;
+  let formattedFollowers = num.toLocaleString('en-US');
+  // console.log(formattedFollowers); // выводит "100,500"
+
   const toggleActiveFollow = async () => {
     if (!activeFollow) {
       user.followers += 1;
     } else {
       user.followers -= 1;
     }
-
-    const followers = user.followers;
-    const id = user.id;
-    const updateFollowing = !activeFollow;
 
     await updateUser(id, updateFollowing, followers).then(
       setActiveFollow(!activeFollow)
@@ -42,7 +46,7 @@ export const Card = ({ user }) => {
       <TextWrapper>
         <Text>{user.user}</Text>
         <Text>{user.tweets} tweets</Text>
-        <Text>{user.followers} followers</Text>
+        <Text>{formattedFollowers} followers</Text>
       </TextWrapper>
       {!activeFollow ? (
         <StyledButton onClick={toggleActiveFollow}>follow</StyledButton>
