@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
 `;
 
 export const BackDrop = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
